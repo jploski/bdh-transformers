@@ -30,8 +30,8 @@ The implementation provided by this repository, apart from integrating with the 
 If you have cloned the repository locally:
 
 ```bash
-git clone https://github.com/jploski/bdh
-cd bdh
+git clone https://github.com/jploski/bdh-transformers
+cd bdh-transformers
 pip install -e .
 ```
 
