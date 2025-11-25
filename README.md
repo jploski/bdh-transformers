@@ -85,7 +85,7 @@ print(generated_text)
 This implementation is designed to fit seamlessly into the Hugging Face ecosystem:
 
 *   **Auto-Registration:** Automatically registers `BDHConfig` and `BDHForCausalLM` with the `transformers` library when imported.
-    **Recurrent State Caching:** Full support for `use_cache=True` using a constant-memory recurrent state, enabling "infinite" context generation.
+*   **Recurrent State Caching:** Full support for `use_cache=True` using a constant-memory recurrent state, enabling "infinite" context generation.
 *   **Chunked Linear Attention:** Efficiently processes long prompts (prefill) with linear time complexity and constant memory usage within the attention block.
 *   **RoPE:** Implements Rotary Positional Embeddings for positional encoding.
 *   **Generation:** Fully compatible with `.generate()` methods, including greedy search, sampling, and beam search.
