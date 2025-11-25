@@ -11,7 +11,7 @@ Note that this experimental model is *not* based on the standard Transformer arc
 ## Architectural Highlights
 
 According to the [research paper](https://arxiv.org/abs/2509.26507) the BDH model was derived by mimicking low-level biological brain structures through a [Hebbian learning](https://en.wikipedia.org/wiki/Hebbian_theory) framework, which was subsequently mapped to a novel language model architecture to support efficient execution on current hardware (BDH-GPU).
-The implementation found provided by this repository, apart from integrating with the HF transformers ecosystem, focuses on long-context sequence modeling. Its key features are:
+The implementation provided by this repository, apart from integrating with the HF transformers ecosystem, focuses on long-context sequence modeling. Its key features are:
 
 *   **Recurrent State Cache:** Instead of a traditional KV cache that grows with the sequence length, BDH-GPU (similar to Mamba) can utilize a fixed-size incrementally updated state. This allows it to process sequences of "infinite" length with constant memory usage during generation (subject to numerical precision and information-theoretic limitations).
 *   **Linear Attention:** Attention is computed in linear time `O(T)` relative to sequence length, compared to the quadratic complexity `O(T^2)` of standard attention, making it more suitable for long documents or continuous streams of data.
